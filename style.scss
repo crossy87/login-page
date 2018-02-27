@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: peachpuff;
+}
+
+
+form {
+  border: 1px solid green;
+}
+
+label {
+  display: block;
+}
+
+input {
+  display: block;
+}
