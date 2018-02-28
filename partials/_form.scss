@@ -1,0 +1,60 @@
+
+
+
+  form {
+    background: linear-gradient(cyan, white);
+    margin: auto;
+    padding: 2% 5%;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+
+  }
+
+  label {
+    display: inline-block;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 25%;
+  }
+
+  .error{
+    color: red;
+    display: inline;
+    text-transform: lowercase;
+  }
+
+  .checkbox {
+    display: inline;
+    vertical-align:middle;
+    width: 30px;
+  }
+
+  .check-label {
+    display: inline;
+    width: 100px;
+  }
+
+  input {
+    display: inline;
+    height: 30px;
+    margin: 1% auto;
+    width: 70%;
+    outline: none;
+    border: 1px solid cyan;
+    font-size: 16px;
+
+  }
+
+  input[type=text]:focus, input[type=password]:focus {
+    border: 1px solid blue;
+    box-shadow: 1px 2px blue;
+  }
+
+  

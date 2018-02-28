@@ -1,6 +1,6 @@
 $().ready( function () {
 
-  //validate the form input fields
+//validate the form input fields
   const $form = $('form');
   $form.validate({
     rules: {
@@ -30,7 +30,7 @@ $().ready( function () {
     }
   });
 
-  //logging the role options checked
+//logging the role options checked
   const checkedBoxes = [];
   const $boxes = $('.checkbox');
   for(let i =  0; $boxes[i]; i++){
@@ -40,6 +40,7 @@ $().ready( function () {
     }
   }
 
+//convert form inputs into an object
   function formObject(form){
     var array = $(form).serializeArray();
     var object = {};
@@ -51,10 +52,10 @@ $().ready( function () {
     return object;
   }
 
-
+//submit and console log the data object
   $form.submit(function(e) {
     console.log(formObject($form));
-
     e.preventDefault();
   });
+  
 });
