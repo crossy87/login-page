@@ -40,20 +40,20 @@ $().ready( function () {
     }
   }
 
-  function ConvertFormToJSON(form){
+  function formObject(form){
     var array = $(form).serializeArray();
-    var json = {};
+    var object = {};
 
     $.each(array, function() {
-      json[this.name] = this.value || '';
+      object[this.name] = this.value || '';
     });
 
-    return json;
+    return object;
   }
 
 
   $form.submit(function(e) {
-    console.log(ConvertFormToJSON($form));
+    console.log(formObject($form));
 
     e.preventDefault();
   });
