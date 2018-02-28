@@ -1,11 +1,7 @@
 $().ready( function () {
 
+  //validate the form input fields
   const $form = $('form');
-  // const $name = $('#fullname').val();
-  // const $email = $('#email').val();
-  // const $password = $('#password').val();
-  // const $passwordConfirm = $('#confirm-password').val();
-
   $form.validate({
     rules: {
       fullname: 'required',
@@ -34,53 +30,31 @@ $().ready( function () {
     }
   });
 
-
-
   //logging the role options checked
-  // const checkedBoxes = [];
-  // const $boxes = $('.checkbox');
-  // for(let i =  0; $boxes[i]; i++){
-  //   if($boxes[i].checked){
-  //     checkedBoxes.push($boxes[i].val());
-  //     console.log(checkedBoxes);
-  //   }
-  // }
+  const checkedBoxes = [];
+  const $boxes = $('.checkbox');
+  for(let i =  0; $boxes[i]; i++){
+    if($boxes[i].checked){
+      checkedBoxes.push($boxes[i].val());
+      console.log(checkedBoxes);
+    }
+  }
+
+  function ConvertFormToJSON(form){
+    var array = $(form).serializeArray();
+    var json = {};
+
+    $.each(array, function() {
+      json[this.name] = this.value || '';
+    });
+
+    return json;
+  }
 
 
+  $form.submit(function(e) {
+    console.log(ConvertFormToJSON($form));
+
+    e.preventDefault();
+  });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-// window.addEventListener('DOMContentLoaded', () => {
-//
-//   const form = document.querySelector('form');
-//   const name = document.getElementById('fullname');
-//   const email = document.getElementById('email');
-//   const password = document.getElementById('original-password');
-//   const passwordConfirmation = document.getElementById('confirm-password');
-//
-//
-//   const checkedValue = [];
-//   const inputElements = document.getElementsByClassName('checkbox');
-//
-//   form.addEventListener('change', () => {
-//     for(let i=0; inputElements[i]; ++i){
-//       if(inputElements[i].checked){
-//         checkedValue.push(inputElements[i].value);
-//       }
-//
-//     }
-//     console.log('Name:', name.value, 'Email:', email.value, 'Role:', checkedValue, 'password:', password.value, passwordConfirmation.value);
-//   });
-//
-//
-// });
