@@ -3,11 +3,15 @@ header {
 
   h1 {
     background: linear-gradient(white, cyan);
-    clip-path: polygon(40% 5%, 85% 45%, 62% 90%, 30% 75%, 5% 62%);
+    clip-path: polygon(40% 5%, 85% 45%, 70% 90%, 30% 75%, 5% 50%);
     font-size: 26px;
     height: 250px;
     line-height: 250px;
     width: 30%;
     margin: 0 auto;
+  }
+
+  h2{
+    font-size: 20px;
   }
 }
